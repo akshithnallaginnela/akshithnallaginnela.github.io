@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* CSS Reset and Basic Setup */
@@ -450,6 +451,23 @@
                 height: 250px;
             }
         }
+        .btn-icon {
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            padding: 12px 18px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-icon:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
     </style>
 </head>
 <body>
@@ -623,14 +641,20 @@
                 </form>
             </div>
         </div>
+        <!-- Social Icon Buttons -->
+        <div class="contact-info" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
+            <a href="https://github.com/akshithnallaginnela" target="_blank" class="btn-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/akshith-nallaginnela" target="_blank" class="btn-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Akshith Nallaginnela. All Rights Reserved.</p>
-        <div class="contact-info" style="margin-top: 15px;">
-      <a href="https://github.com/akshithnallaginnela" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/akshith-nallaginnela" target="_blank">LinkedIn</a>
     </footer>
 
     <script>
