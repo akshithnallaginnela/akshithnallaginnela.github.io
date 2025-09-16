@@ -203,7 +203,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background-color: #4f46e5; /* Darker Indigo from your design */
+            background-color: #4f46e5; /* Darker Indigo */
             border-color: #4f46e5;
         }
         
@@ -337,24 +337,54 @@
             text-align: center;
             max-width: 600px;
         }
-        
-        .contact-info {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
 
-        .contact-info a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s;
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; top: 0; 
+            width: 100%; height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.7); 
         }
-        
-        .contact-info a:hover {
+        .modal-content {
+            background-color: var(--background-light);
+            margin: 10% auto; 
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%; max-width: 500px;
+            color: var(--text-primary);
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
             color: var(--primary-color);
         }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: #1e293b;
+            color: var(--text-primary);
+        }
+        .close {
+            color: var(--text-secondary);
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .close:hover { color: var(--primary-color); }
 
         /* Footer */
         footer {
@@ -372,7 +402,7 @@
 
             .nav-links {
                 position: fixed;
-                top: 80px; /* Height of the header */
+                top: 80px;
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
@@ -452,7 +482,6 @@
                     <h1>AKSHITH NALLAGINNELA</h1>
                     <p>A passionate final-year B.Tech AIML student with a solid command of Python, C, and Java, eager to contribute to innovative projects that make a difference.</p>
                     <a href="#projects" class="btn">View My Work</a>
-                    <!-- CHANGE THIS: Link to your resume PDF -->
                     <a href="/path-to-your-resume.pdf" class="btn btn-secondary" target="_blank">View Resume</a>
                 </div>
             </div>
@@ -508,7 +537,7 @@
             <div class="container">
                 <h2 style="text-align: center;">My Projects</h2>
                 <div class="projects-grid">
-                    <!-- Project 1 from your file -->
+                    <!-- Project 1 -->
                     <div class="project-card">
                         <img src="https://raw.githubusercontent.com/akshithnallaginnela/akshithnallaginnela/refs/heads/main/crypto.jpg" alt="Cryptographic Algorithm Identification Project" class="project-image">
                         <div class="project-content">
@@ -520,43 +549,40 @@
                                 <span>Data Science</span>
                             </div>
                             <div class="project-links">
-                                <!-- CHANGE THIS: Add live demo and source code links -->
                                 <a href="#" target="_blank">Live Demo</a>
                                 <a href="#" target="_blank">Source Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 from your file -->
+                    <!-- Project 2 -->
                     <div class="project-card">
                         <img src="https://raw.githubusercontent.com/akshithnallaginnela/akshithnallaginnela/refs/heads/main/python.png" alt="Number Guessing Game Project" class="project-image">
                         <div class="project-content">
                             <h3>Number Guessing Game</h3>
-                            <p>A classic game where the user guesses a random number, receiving hints. It demonstrates control flow, input handling, and random number generation in Python.</p>
+                            <p>A classic game where the user guesses a random number, receiving hints. It's a fun project showcasing logic implementation using Python.</p>
                             <div class="project-tags">
                                 <span>Python</span>
+                                <span>Game</span>
                             </div>
                             <div class="project-links">
-                                <!-- CHANGE THIS: Add live demo and source code links -->
                                 <a href="#" target="_blank">Live Demo</a>
                                 <a href="#" target="_blank">Source Code</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Project 3 from your file -->
+
+                    <!-- Project 3 -->
                     <div class="project-card">
-                        <img src="https://raw.githubusercontent.com/akshithnallaginnela/akshithnallaginnela/refs/heads/main/arduino.png" alt="Blind Man's Stick Project" class="project-image">
+                        <img src="https://raw.githubusercontent.com/akshithnallaginnela/akshithnallaginnela/refs/heads/main/tic.jpg" alt="Tic Tac Toe Project" class="project-image">
                         <div class="project-content">
-                            <h3>Blind Man's Stick</h3>
-                            <p>An assistive device using Arduino and sensors (ultrasonic, humidity) to detect obstacles and provide vibration/sound alerts for visually impaired users.</p>
+                            <h3>Tic Tac Toe</h3>
+                            <p>A simple two-player game implemented in Python. This project demonstrates understanding of loops, conditionals, and basic game logic.</p>
                             <div class="project-tags">
-                                <span>Arduino</span>
-                                <span>C++</span>
-                                <span>Hardware</span>
+                                <span>Python</span>
+                                <span>Game Development</span>
                             </div>
                             <div class="project-links">
-                                <!-- CHANGE THIS: Add live demo and source code links -->
                                 <a href="#" target="_blank">Live Demo</a>
                                 <a href="#" target="_blank">Source Code</a>
                             </div>
@@ -565,89 +591,86 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <h2>Get In Touch</h2>
-                <p>I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
-                <!-- CHANGE THIS: Update with your actual email address -->
-                <a href="mailto:akshith.n@example.com" class="btn">Say Hello</a>
-                
-                <div class="contact-info">
-                    <a href="https://github.com/akshithnallaginnela" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/akshith-nallaginnela" target="_blank">LinkedIn</a>
-                </div>
+                <h2>Contact Me</h2>
+                <p>Have a project or opportunity in mind? Click below to get in touch with me.</p>
+                <button class="btn" id="openModal">Get in Touch</button>
             </div>
         </section>
+
+        <!-- Modal Form -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Send Me a Message</h2>
+                <form action="https://formspree.io/f/mnnbknvk" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2024 AKSHITH NALLAGINNELA. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2025 Akshith Nallaginnela. All Rights Reserved.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Hamburger Menu ---
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
+        // Section animation on scroll
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
             });
+        }, { threshold: 0.1 });
+        sections.forEach(section => observer.observe(section));
 
-            // Close menu when a link is clicked
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
 
-            // --- Active Nav Link on Scroll ---
-            const sections = document.querySelectorAll('section');
-            const navLi = document.querySelectorAll('.nav-links li a');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '-50% 0px -50% 0px',
-                threshold: 0
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        document.querySelectorAll('.nav-links a').forEach(a => {
-                            a.classList.remove('active');
-                        });
-                        document.querySelector(`.nav-links a[href="#${id}"]`).classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-            
-            // --- Reveal sections on scroll ---
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            document.querySelectorAll('section').forEach(section => {
-                revealObserver.observe(section);
+        // Smooth scroll active link
+        const navLinkEls = document.querySelectorAll(".nav-link");
+        window.addEventListener("scroll", () => {
+            let fromTop = window.scrollY + 100;
+            navLinkEls.forEach(link => {
+                const section = document.querySelector(link.getAttribute("href"));
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinkEls.forEach(l => l.classList.remove("active"));
+                    link.classList.add("active");
+                }
             });
         });
+
+        // Modal functionality
+        const modal = document.getElementById("contactModal");
+        const openModalBtn = document.getElementById("openModal");
+        const closeModalBtn = document.querySelector(".close");
+
+        openModalBtn.onclick = () => { modal.style.display = "block"; }
+        closeModalBtn.onclick = () => { modal.style.display = "none"; }
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
     </script>
 </body>
 </html>
