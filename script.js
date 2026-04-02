@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
     let fromTop = window.scrollY + 100;
     navLinkEls.forEach(link => {
         const section = document.querySelector(link.getAttribute("href"));
-        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
             navLinkEls.forEach(l => l.classList.remove("active"));
             link.classList.add("active");
         }
