@@ -325,6 +325,93 @@ section.visible {
     max-width: 600px;
 }
 
+/* Achievements Section */
+#achievements {
+    background-color: #121212;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.achievement-card {
+    background: var(--background-light);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.achievement-highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.achievement-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Exploring New Technologies Section */
+#exploring {
+    background-color: #1e293b;
+}
+
+.exploring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.exploring-card {
+    background: var(--background-light);
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-top: 3px solid var(--primary-color);
+}
+
+.exploring-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    border-top-color: #4f46e5;
+}
+
+.exploring-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.exploring-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* Modal styles */
 .modal {
     display: none;
